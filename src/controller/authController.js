@@ -136,7 +136,7 @@ const authController = {
             const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
             const googleResponse = await googleClient.verifyIdToken({
                 idToken: idToken,
-                audience: process.env.GOOGLE_CLIENT_ID+
+                audience: process.env.GOOGLE_CLIENT_ID
             });
             
             const payload = googleResponse.getPayload();
